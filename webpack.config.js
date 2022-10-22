@@ -12,6 +12,9 @@ module.exports = {
     path: path.join(__dirname, "build"),
     filename: "[name].js",
   },
+  module: {
+    rules: [{ test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ }],
+  },
   plugins: [
     new webpack.BannerPlugin({
       banner: `빌드 날짜: ${new Date().toLocaleString()}`,
