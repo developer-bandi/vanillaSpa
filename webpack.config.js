@@ -13,7 +13,13 @@ module.exports = {
     filename: "[name].js",
   },
   module: {
-    rules: [{ test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ }],
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
+    ],
   },
   plugins: [
     new webpack.BannerPlugin({

@@ -1,0 +1,11 @@
+.todoListMainBlock {
+  width: 500px;
+  margin: 100px auto 0 auto;
+  border: 1px solid black;
+}
+
+.todoListItems {
+  width: 500px;
+  height: 500px;
+  overflow-y: scroll;
+}
