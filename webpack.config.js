@@ -35,11 +35,10 @@ module.exports = {
       directory: path.join(__dirname, "build"),
     },
     port: 8080,
+    open: true,
     client: {
-      overlay: {
-        errors: true,
-        warnings: false,
-      },
+      overlay: true,
+      progress: true,
     },
   },
 };

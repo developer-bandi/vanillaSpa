@@ -1,13 +1,10 @@
 /** @jsx h */
-function h(type, props, ...children) {
-  return { type, props, children: children.flat() };
-}
+import h from "../../lib/h";
 import { useDispatch } from "../../lib/redux";
 import "./item.css";
 
 const Item = (content, checked, index) => {
   const dispatch = useDispatch();
-  console.log(checked);
   return (
     <div class="itemMainBlock">
       {checked ? (

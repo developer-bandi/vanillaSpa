@@ -1,15 +1,15 @@
 /** @jsx h */
-function h(type, props, ...children) {
-  return { type, props, children: children.flat() };
-}
+import h from "../../lib/h";
+import { Link } from "../../lib/router";
 import "./Home.css";
+
 const Home = () => {
   return (
     <div>
       <h1 class="homeTitle">
-        <a href="/todolist" data-link>
+        <Link href="/todolist" data-link>
           일정관리로 이동하기
-        </a>
+        </Link>
       </h1>
     </div>
   );

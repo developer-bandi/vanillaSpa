@@ -1,20 +1,15 @@
 /** @jsx h */
-function h(type, props, ...children) {
-  return { type, props, children: children.flat() };
-}
-import { createStore } from "../lib/redux";
-import { Router } from "../lib/router";
-import info from "./store";
+import h from "../lib/h";
+import { Route, Routes } from "../lib/router";
 import TodoList from "./components/TodoList";
 import Home from "./components/Home";
 
 const App = () => {
-  createStore(info.name, info.reducer, info.initialState);
   return (
-    <Router>
-      <route path="/" element={Home} />
-      <route path="/todolist" element={TodoList} />
-    </Router>
+    <Routes>
+      <Route path="/" element={Home} />
+      <Route path="/todolist" element={TodoList} />
+    </Routes>
   );
 };
 

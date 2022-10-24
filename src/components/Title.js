@@ -1,8 +1,7 @@
 /** @jsx h */
-function h(type, props, ...children) {
-  return { type, props, children: children.flat() };
-}
+import h from "../../lib/h";
 import "./Title.css";
+
 const Title = () => {
   return (
     <div class="mainBlock">

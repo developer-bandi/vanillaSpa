@@ -1,10 +1,9 @@
 /** @jsx h */
-function h(type, props, ...children) {
-  return { type, props, children: children.flat() };
-}
+import h from "../../lib/h";
 import { useState } from "../../lib/react";
 import { useDispatch } from "../../lib/redux";
 import "./input.css";
+
 const Input = () => {
   const [content, setContent] = useState("");
   const dispatch = useDispatch();

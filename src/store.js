@@ -1,7 +1,6 @@
 const initialState = [];
 
 const reducer = (action, payload, state) => {
-  console.log("들어온값", payload);
   switch (action) {
     case "add":
       return [...state, payload];
