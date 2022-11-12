@@ -2,19 +2,16 @@
 import h from "../../lib/h";
 import Input from "./input";
 import Item from "./item";
-import Title from "./Title";
 import { useSelector } from "../../lib/redux";
 import "./TodoList.css";
+import Header from "./header";
 
 const TodoList = () => {
   const contents = useSelector("todoList");
   return (
     <div>
-      <a href="/" data-link>
-        홈으로 이동
-      </a>
+      {Header()}
       <div class="todoListMainBlock">
-        {Title()}
         {Input()}
         <div class="todoListItems">
           {contents.map((content, index) => {

@@ -33,7 +33,7 @@ const Item = (content, checked, index) => {
 
       <button
         class="itemDeleteButton"
-        onclick={() => {
+        onclick={(e) => {
           dispatch("todoList", "delete", index);
         }}
       >

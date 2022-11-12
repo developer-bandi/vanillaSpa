@@ -19,6 +19,18 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
+      {
+        test: /\.jpg$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              publicPath: "./dist/",
+              name: "[name].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

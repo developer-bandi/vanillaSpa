@@ -1,4 +1,10 @@
-.homeTitle {
-  margin-top: 300px;
+.homeImg {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+.homeTodayDo {
+  padding: 20px;
   text-align: center;
+  font-size: 30px;
 }
